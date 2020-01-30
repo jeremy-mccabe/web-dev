@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+  <meta charset="utf-8">
+  <title>Illuminate | Browse</title>
+  <link rel = "stylesheet" type = "text/css" href = "illuminate.css"> </link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+</head>
+<!-- START -->
+<body ng-controller='mainController'>
+  <img src="dark_back.jpg" alt="" id="bg"/>
+  <div id="content">
+<!-- BULB -->
+    <div class="bulb">
+      <img id='bulb' src="bulb.png" ng-mouseover='on()' ng-mouseleave='off()' ng-click='proveIt()'>
+    </div>
+<!-- HEADER -->
+    <div class="header">
+      <div >
+        <p class="brand">Illuminate</p>
+      </div>
+    </div>
+<!-- NAV -->
+    <div class="nav">
+      <ul>
+        <li><a href="./home.html">Profile</a></li>
+        <li><a class="active" href="./browse.html">Browse</a></li>
+        <li><a href="./requests.html">Requests</a></li>
+        <li><a href="./meetings.html">Meetings</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="mainBody">
+<!-- NOTIFICATIONS MODAL -->
+<div class="noteModal" ng-show='proof'>
+  <p><span style='color:orange;text-decoration:underline'>YOU HAVE NEW NOTIFICATIONS!</span><br><br>
+    <strong style='color:yellow'>NEW</strong> Requests: <span style='color:red'>4</span><br>
+    <strong style='color:yellow'>NEW</strong> Approvals: <span style='color:red'>3</span><br>
+    <strong style='color:yellow'>NEW</strong> Meetings: <span style='color:red'>1</span><br>
+    <strong style='color:yellow'>NEW</strong> Views: <span style='color:red'>28</span><br>
+    <strong style='color:yellow'>NEW</strong> Updates: <span>0</span><br><br>
+    <button type="button" name="noteClose" class='noteClose' ng-click='closeNote()'>Close</button>
+  </p>
+</div>
+<!-- MAIN VIEW -->
+<div class="browseBanner">
+  <p class='alphaSearch'>A <span style='color:rgb(255, 199, 0)'>B</span> C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+  <div class="browseResultsBox">
+    <ul class="browseResultsList">
+      <li ng-repeat="hobbies in bHobbies">{{hobbies}}</li>
+    </ul>
+  </div>
+  <div class="browseSearch">
+    <p>Find a talent</p>
+    <input type="text" placeholder="Search..." value="">
+  </div>
+</div>
+<div class="apiBanner">
+  <img src="wiki.png" id="wiki">
+  <div class="browseSearch">
+    <p>Reference</p>
+    <input type="text" placeholder="Search..." value="">
+  </div>
+</div>
+<!-- FOOTER -->
+      <div class="footer">
+  <p style='margin-top: 4vh;line-height: 28px;'>© 2017 Illuminate Applications, Inc.<br>support@illuminateapp.com<br>P: 555-456-7890<br>F: 555-123-0987</p>      </div>
+    </div>
+<!-- END -->
+  </div>
+</body>
+<script src="illuminate.js"></script>
+</html>

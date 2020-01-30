@@ -1,0 +1,185 @@
+/*HTML4: Making It Real
+================
+
+Difficulty - 3/5
+---------
+
+Objective
+----------
+Time to test your HTML/CSS skills! A designer has put together a sample blog post page for you to build. Try to get your implementation as close to the design as possible. Use proper HTML5 tags, classes, ids, and get fancy with your CSS.
+
+Skills
+--------
+- HTML5
+- CSS
+
+Resources
+---------
+
+- <a href="http://placehold.it/">Placeholder image tool</a>
+- <a href="http://flatuicolors.com/">FlatUI Colors</a>
+- <a href="http://www.lipsum.com/">Lorem Ipsum Generator</a>
+
+Requirements
+------------
+Build Out Design: <a href="https://ru-student-site.s3.amazonaws.com/BiumoSH6aQP6cjQtp.png">Mockup</a>
+
+- Build an HTML5 document
+- Add markup to support design content (you can use lorem ipsum or write your own content)
+- Add CSS to match the design*/
+body{
+  font-family: sans-serif;
+}
+div.wrapper{
+  height: 100vh;
+  width: 100vw;
+  background-color: #7F8C8D;
+}
+div.header{
+  display: block;
+  height: 30vh;
+  width: 37.33vw;
+  background-color: #2ECC71;
+  margin: 0px;
+  padding: 1px;
+  position: absolute;
+  left: 31vw;
+  top: 3vh;
+}
+div.title{
+  font-weight: initial;
+  height:45px;
+  position: absolute;
+  left: -2.5px;
+  top: 20vh;
+  margin: 1vw;
+  color: white;
+  font-family: sans-serif;
+  }
+.menu{
+
+}
+.nav{
+
+}
+div.topLine{
+  height: .35vw;
+  width: 37.45vw;
+  position: absolute;
+  background-color: #27AE60;
+  top: 32.25vh;
+  left: 31vw;
+}
+div.bottomLine{
+  height: .35vw;
+  width: 37.45vw;
+  position: absolute;
+  background-color: #2C3E50;
+  top: 38.85vh;
+  left: 31vw;
+}
+#page{
+  background-color: #ECF0F1;
+  position: absolute;
+  top: 39.59vh;
+  left: 31vw;
+  width: 37.45vw;
+}
+.article{
+    position: relative;
+    margin-left: 1vw;
+    top: 2vh;
+    left: 1vw;
+
+}
+.section{
+    position: relative;
+    margin-left: 1vw;
+    top: 0vh;
+    left: 0.5vw;
+}
+p.lineBreak{
+  margin-left: -1vw;
+  color: lightgrey;
+}
+.para{
+  margin-left: 1.5vw;
+  font-size: 1vw;
+  margin: 3vw;
+  line-height: 3vh;
+}
+.table{
+  margin-left: 1.5vw;
+
+}
+.snippet{
+  margin-left: 1.5vw;
+
+}
+.image{
+  margin-left: 1.5vw;
+
+}
+.list{
+  margin-left: 1.5vw;
+
+}
+.copyright{
+
+}
+.form{
+
+}
+.liner{
+  margin-left: 1.5vw;
+
+}
+.commentsSection{
+  margin-left: 1.5vw;
+
+}
+.commentBox{
+  margin-left: 1.5vw;
+
+}
+.submit{
+  margin-left: 1.5vw;
+
+}
+.commentsFeed{
+  margin-left: 1.5vw;
+
+}
+div.fixedObj{
+
+}
+div.fixedObj ul{
+
+}
+div.fixedObj ul li{
+
+}
+div.nav ul {position: absolute;left: 31.35vw;display: inline-block;height: 8vh;width: 37.44vw;list-style-type: none;margin: -5px;padding: 0;overflow: hidden;background-color: #34495E;top: 33vh;}
+
+div.nav li {
+    float: right;
+    font-size: 2vh;
+    position: relative;
+    top: 0.8vh;
+}
+
+div.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+div.nav li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}

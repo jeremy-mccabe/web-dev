@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+  <title>Intro to Angular</title>
+  <link rel="stylesheet" href="intro.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="intro.js"></script>
+</head>
+<body ng-controller='mainController as Main' style='background-color:lightgreen'>
+  <h1>ANGULAR INTRO</h1>
+  <div >
+    <button type="button" ng-click='Main.revealDiv()'>Print Me!</button>
+  </div>
+  <div ng-show='Main.clicked'>
+    <h1>Now I am visible!</h1>
+  </div>
+  <div >
+    <button type="button" ng-click='Main.revealDiv2()'>Show List!</button>
+  </div>
+  <div ng-show='Main.clicked2'>
+    <ul>
+      <li>Red</li>
+      <li>Blue</li>
+      <li>Green</li>
+    </ul>
+  </div>
+  <div>
+    <h2>STATEMENT.. {{Main.exclaim}}</h2>
+    <h3>Defined.. {{Main.exclaim}}</h3>
+    <p id="redpara" ng-Mouseover="Main.changeIt()" ng-Mouseleave="Main.changeItBack()">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum   <a id="anchor" href="http://google.com" ng-click='Main.checker()'>CLICK HERE</a> quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    </p>
+  </div>
+  <!-- big button -->
+  <div>
+    <button type="button" id="bigButton" class="bigButton" ng-click='Main.boxAppear()'>BIG Ol' BUTTON!</button>
+  </div>
+  <!-- modal -->
+  <div id="fixedBox" class="modal" ng-show="Main.showModal">
+    <div class="modal-content">
+      <span class="close" ng-click="Main.closeWindow()">&times;</span>
+      <h3>Interesting Article</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.  Neque porro quisquam est, qui dolorem ipsum.  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
+    </div>
+  </div>
+  <!-- end body -->
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+  <meta charset="utf-8">
+  <title>Illuminate | About</title>
+  <link rel = "stylesheet" type = "text/css" href = "illuminate.css"> </link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+</head>
+<!-- START -->
+<body ng-controller='mainController'>
+  <img src="dark_back.jpg" alt="" id="bg"/>
+  <div id="content">
+    <!-- BULB -->
+        <div class="bulb">
+          <img id='bulb' src="bulb.png" ng-mouseover='on()' ng-mouseleave='off()' ng-click='proveIt()'>
+        </div>
+    <div class="header">
+      <div >
+        <p class="brand">Illuminate</p>
+
+      </div>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="./home.html">Profile</a></li>
+        <li><a href="./browse.html">Browse</a></li>
+        <li><a href="./requests.html">Requests</a></li>
+        <li><a href="./meetings.html">Meetings</a></li>
+        <li><a class="active" href="./about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="mainBody">
+<!-- VIEW DIV -->
+<div class="aboutBox">
+
+<p class='text' style='text-align: center;'>A Brief Summary...<br><br>Illuminate is a web-based application designed to connect people with valuable skills and know-how that require valuable time
+and resources to learn.  We've long lost the art of teaching others our trade free of cost, and Illuminate acts to fill that gap.  The monetary system can
+place limits on what we have the finances to learn.  Building bridges of communication and knowledge brings us closer together as a community, and offers
+abilities that were otherwise out of reach.  This is a free avenue of trade, and our services are without cost.  All you give is your time. </p>
+</div>
+
+<p class='quote'>"There is no wealth like knowledge, and no poverty like ignorance." <br> <br>-Buddha</p>
+
+<!-- VIEW DIV -->
+      <div class="footer">
+        <p style='margin-top: 4vh;line-height: 28px;'>© 2017 Illuminate Applications, Inc.<br>support@illuminateapp.com<br>P: 555-456-7890<br>F: 555-123-0987</p>
+      </div>
+    </div>
+    <!-- NOTIFICATIONS MODAL -->
+    <div class="noteModal" ng-show='proof'>
+      <p><span style='color:orange;text-decoration:underline'>YOU HAVE NEW NOTIFICATIONS!</span><br><br>
+        <strong style='color:yellow'>NEW</strong> Requests: <span style='color:red'>4</span><br>
+        <strong style='color:yellow'>NEW</strong> Approvals: <span style='color:red'>3</span><br>
+        <strong style='color:yellow'>NEW</strong> Meetings: <span style='color:red'>1</span><br>
+        <strong style='color:yellow'>NEW</strong> Views: <span style='color:red'>28</span><br>
+        <strong style='color:yellow'>NEW</strong> Updates: <span>0</span><br><br>
+        <button type="button" name="noteClose" class='noteClose' ng-click='closeNote()'>Close</button>
+      </p>
+    </div>
+<!-- END -->
+  </div>
+</body>
+<script src="illuminate.js"></script>
+</html>

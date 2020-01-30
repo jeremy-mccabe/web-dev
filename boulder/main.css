@@ -1,0 +1,118 @@
+
+body{
+  background: -webkit-linear-gradient(#6C6BFF, #1B1B40);
+  text-align: center;
+}
+
+/*Banner*/
+.header{
+  background-color: black;
+  height: 24vh;
+  width: 100vw;
+  font-style: italic;
+  font-family: cursive;
+  color: teal;
+}
+
+/*Saying in the Banner*/
+div h1{
+  font-size: 14vh;
+  padding: 0vh;
+  margin: 0vh;
+  text-align: center;
+}
+
+/*Nav Menu*/
+.navBox{
+  background-color: #333;
+}
+ul.nav {
+  transform: translateX(35%);
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ul.nav li {
+  float: left;
+}
+ul.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.nav li a:hover:not(.active) {
+  background-color: #111;
+}
+.active {
+  background-color: teal;
+}
+
+/*Big Picture*/
+#bigPicBox{
+  background: -webkit-linear-gradient(teal, grey);
+}
+
+/*h3 headings and 3 paragraphs*/
+.para{
+  color: #fff;
+  background-position: center;
+  background: -webkit-linear-gradient(#333, #111);
+  margin: 10vh 10vw;
+  padding: 10vh 10vw;
+  border-radius: 25px;
+  line-height: 5vh;
+}
+.footer{
+  background-color: black;
+  height: 19vh;
+  width: 100vw;
+  font-style: italic;
+  font-family: cursive;
+  color: teal;
+}
+
+/*Image Gallery*/
+#galleryBox{
+  background: -webkit-linear-gradient(teal, grey);
+  /*background-color: #333;*/
+  height: 30vh;
+  width: 100vw;
+  overflow: hidden;
+}
+div.img {
+  margin: 0vh 11vh;
+  border: 10px ridge #333;
+  float: left;
+  width: 180px;
+  height: 27.5vh;
+}
+div.img:hover {
+  border: 10px ridge teal;
+}
+div.img img {
+  width: 100%;
+  height: auto;
+}
+div.desc {
+  font-size: 5vh;
+  text-shadow: .5vh .5vh #5b5aee;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
+footer p{
+  display: inline-block;
+  padding-top: 4vh;
+}
+
+/*MEDIA QUERYS
+@media (max-width: 600px) {
+.facet_sidebar {
+display: none;
+}
+}*/

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+  <meta charset="utf-8">
+  <title>Illuminate | Home</title>
+  <link rel = "stylesheet" type = "text/css" href = "illuminate.css"> </link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+</head>
+<!-- START -->
+<body ng-controller='mainController'>
+  <img src="dark_back.jpg" alt="" id="bg"/>
+  <div id="content">
+<!-- BULB -->
+    <div class="bulb">
+      <img id='bulb' src="bulb.png" ng-mouseover='on()' ng-mouseleave='off()' ng-click='proveIt()'>
+    </div>
+<!-- HEADER -->
+    <div class="header">
+      <div >
+        <p class="brand">Illuminate</p>
+      </div>
+    </div>
+<!-- NAV -->
+    <div class="nav">
+      <ul>
+        <li><a class="active" href="./home.html">Profile</a></li>
+        <li><a href="./browse.html">Browse</a></li>
+        <li><a href="./requests.html">Requests</a></li>
+        <li><a href="./meetings.html">Meetings</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="mainBody">
+<!-- NOTIFICATIONS MODAL -->
+<div class="noteModal" ng-show='proof'>
+  <p><span style='color:orange;text-decoration:underline'>YOU HAVE NEW NOTIFICATIONS!</span><br><br>
+    <strong style='color:yellow'>NEW</strong> Requests: <span style='color:red'>4</span><br>
+    <strong style='color:yellow'>NEW</strong> Approvals: <span style='color:red'>3</span><br>
+    <strong style='color:yellow'>NEW</strong> Meetings: <span style='color:red'>1</span><br>
+    <strong style='color:yellow'>NEW</strong> Views: <span style='color:red'>28</span><br>
+    <strong style='color:yellow'>NEW</strong> Updates: <span>0</span><br><br>
+    <button type="button" name="noteClose" class='noteClose' ng-click='closeNote()'>Close</button>
+  </p>
+</div>
+<!-- MAIN VIEW -->
+<div class="proBanner">
+<!-- PROFILE PIC -->
+  <div class="picBox">
+    <img src="profile_pic.jpg" class="pic">
+  </div>
+</div>
+<!-- STARS -->
+<div class="stars">
+  <img src="rank.png" style='position: absolute;'>
+  <img src="rank.png" style='position: absolute;left:45px'>
+  <img src="rank.png" style='position: absolute;left:90px'>
+  <img src="rank_half.png" style='position: absolute;left:135px;z-index:1'>
+  <img src="rank_blank.png" style='position: absolute;left:135px'>
+  <img src="rank_blank.png" style='position: absolute;left:180px'>
+</div>
+<!-- BIO -->
+<div class="bio">
+  <p><span style='color:rgba(255, 199, 0,1)'>NAME</span>:  John Doe<br>
+     <span style='color:rgba(255, 199, 0,1)'>LOCATION</span>:  Boulder, CO <br>
+     <span style='color:rgba(255, 199, 0,1)'>RANKING</span>:<br>
+     <span style='color:rgba(255, 199, 0,1)'>ABOUT</span>:  I am a professional free-lance etc. and have been....
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+     do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco
+     laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+     irure dolor in reprehenderit in voluptate velit esse cillum
+     dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+     cupidatat non proident, sunt in culpa qui officia deserunt.
+  </p>
+</div>
+<!-- SKILLS/SEEKING -->
+<div class="skills">
+  <p class='talentLabel'>John's Talents</p>
+  <ul>
+    <li ng-repeat="talent in skills">{{talent}}<button type="button" name="request" class='requestBtn'>Request!</button></li>
+  </ul>
+  <br>
+  <p class='talentLabel'>Seeking...</p>
+  <ul>
+    <li ng-repeat="talent in seeking">{{talent}}<button type="button" name="Offer!" class='offerBtn'>Offer!</button></li>
+  </ul>
+</div>
+<!-- FOOTER -->
+      <div class="footer">
+  <p style='margin-top: 4vh;line-height: 28px;'>© 2017 Illuminate Applications, Inc.<br>support@illuminateapp.com<br>P: 555-456-7890<br>F: 555-123-0987</p>      </div>
+    </div>
+<!-- END -->
+  </div>
+</body>
+<script src="illuminate.js"></script>
+</html>

@@ -1,0 +1,74 @@
+.template{
+  overflow: scroll;
+  margin: 6vh auto;
+  width: 90vw;
+  height: 85vh;
+  background: -webkit-linear-gradient(red, yellow);
+  border: 15px ridge blue;
+}
+.socialBanner{
+  text-align: center;
+  background-color: blue;
+  color: white;
+  font-size: 6.5vw;
+  font-family: sans-serif;
+  height: 10vh;
+  overflow: auto;
+  display: block;
+  width: inherit;
+  border: 5px solid #b74c4c;
+  box-sizing: border-box;
+}
+.socialTitle{
+  display: block;
+  font-size: .5em;
+  margin: 0.1em;
+
+}
+div.profileText h3{
+  color: #0079ff;
+  text-decoration: underline;
+  margin-left: 1vw;
+  text-shadow: 1.5px 1.5px black;
+}
+div.profileText p{
+  font-size: 2vw;
+  color: #fff3d6;
+  margin-left: 1vw;
+  text-shadow: 1.5px 1.5px black;
+}
+img{
+  border: 5px solid black;
+  float: left;
+}
+.imgBox{
+  width: 365px;
+  height: 277px;
+  margin: 14px;
+  background-color: crimson;
+}
+#button{
+  height: 4vh;
+width: 7vw;
+position: relative;
+z-index: 1;
+float: right;
+margin-top: -5vh;
+margin-right: 0.35vw;
+}
+.formBox{
+  height: auto;
+  width: auto;
+  background-color: rgba(55,55,55,.5);
+
+}
+.form{
+  text-align: center;
+  height: 50vh;
+  width: auto;
+  background-color: lightgray;
+
+}
+#yo{
+  margin-top: 4vh;
+}

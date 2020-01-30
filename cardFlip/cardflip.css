@@ -1,0 +1,50 @@
+/*ATTENTION!!!!!!!!:
+~~~~Exact Resolution for optimal results:~~~~ (1441 x 695)~~~~*/
+
+body {
+	margin: 0;
+	padding: 40px;
+	background-color: #EFEFEF;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+h2 {
+	margin-top: 0px;
+}
+.portfolio-item {
+	float: left;
+	margin: 10px;
+}
+.front, .back {
+	background: #CCC;
+	border-radius: 10px;
+}
+.front {
+  background-color: blue;
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+  -webkit-transition: -webikit-all ease-in-out 1s;
+  transition: all ease-in-out 1s;
+
+}
+.back {
+  position: absolute;
+  -webkit-transform: translateY(-28.8vh) rotateY(90deg);
+  transform: translateY(-28.8vh) rotateY(90deg);
+	padding: 20px;
+	width: 160px;
+	height: 160px;
+}
+.front:hover{
+  -wewbkit-transform: rotate3d(0,1,0,90deg);
+  transform: rotate3d(0,1,0,90deg);
+
+
+}
+.front:hover ~ .back{
+  -webkit-transform: rotate3d(0,1,0,360deg) translateY(-28.8vh);
+  transform: rotate3d(0,1,0,360deg) translateY(-28.8vh);
+  -webkit-transition: -webikit-all 1s ease-in-out 1s;
+  transition: all 1s ease-in 1s;
+}

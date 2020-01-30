@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app='illApp'>
+<head>
+  <meta charset="utf-8">
+  <title>Illuminate | Login</title>
+  <link rel = "stylesheet" type = "text/css" href = "illuminate.css"> </link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+</head>
+<!-- START -->
+<body ng-controller='mainController'>
+  <img src="login_back.jpg" alt="" id="bg"/>
+  <div id="content">
+
+    <div class="boxModal">
+      <p class='motto'>-A place to barter your knowledge-</p>
+      <div class="boxModalFooter">
+        <p class='motto' style='bottom: 24px;
+        font-size: medium;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);'>© 2017 Illuminate Applications, Inc.</p>
+      </div>
+    </div>
+    <div class="brandBig">
+      <p class='illLogo'>Illuminate</p>
+    </div>
+
+    <button id='loginBtn' onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
+
+    <div id="login" class="modal">
+
+      <form class="modal-content animate" action="action_page.php">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+
+        <div class="container">
+          <label><b style='font-family: fantasy; font-weight: bold;'>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label><b style='font-family: fantasy; font-weight: bold;'>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit" style='margin-left: 50%; transform: translateX(-50%); margin-top: 5px; font-size: initial;background: -webkit-linear-gradient(white, #848484);font-family: fantasy;font-weight: bold;'>Login</button>
+          <input type="checkbox" checked="checked"> Remember me
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw" style='font-family: fantasy; font-weight: bold;'>Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+
+
+    <button id='registerBtn' onclick="document.getElementById('register').style.display='block'" style="width:auto;">Register</button>
+
+    <div id="register" class="modal">
+
+      <form class="modal-content animate" action="action_page.php">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+
+        <div class="container">
+          <label><b style='font-family: fantasy; font-weight: bold;'>Create Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label><b style='font-family: fantasy; font-weight: bold;'>Create Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label><b style='font-family: fantasy; font-weight: bold;'>Confirm Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="submit" style='margin-left: 50%; transform: translateX(-50%); margin-top: 5px; font-size: initial;background: -webkit-linear-gradient(white, #848484);font-family: fantasy;font-weight: bold;'>Join</button>
+          <input type="checkbox" checked="checked"> Remember me
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </form>
+</div>
+<script>
+// Get the modal
+var loginModal = document.getElementById('login');
+var registerModal = document.getElementById('register');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == loginModal) {
+    loginModal.style.display = "none";
+  }
+}
+window.onclick = function(event) {
+  if (event.target == registerModal) {
+    registerModal.style.display = "none";
+  }
+}
+</script>
+<!-- END -->
+</div>
+</body>
+<script src="illuminate.js"></script>
+</html>

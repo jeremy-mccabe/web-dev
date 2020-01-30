@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+  <meta charset="utf-8">
+  <title>Illuminate | Meetings</title>
+  <link rel = "stylesheet" type = "text/css" href = "illuminate.css"> </link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+</head>
+<!-- START -->
+<body ng-controller='mainController'>
+  <img src="dark_back.jpg" alt="" id="bg"/>
+  <div id="content">
+<!-- BULB -->
+    <div class="bulb">
+      <img id='bulb' src="bulb.png" ng-mouseover='on()' ng-mouseleave='off()' ng-click='proveIt()'>
+    </div>
+<!-- HEADER -->
+    <div class="header">
+      <div >
+        <p class="brand">Illuminate</p>
+      </div>
+    </div>
+<!-- NAV -->
+    <div class="nav">
+      <ul>
+        <li><a href="./home.html">Profile</a></li>
+        <li><a href="./browse.html">Browse</a></li>
+        <li><a href="./requests.html">Requests</a></li>
+        <li><a class="active" href="./meetings.html">Meetings</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="mainBody">
+<!-- NOTIFICATIONS MODAL -->
+<div class="noteModal" ng-show='proof'>
+  <p><span style='color:orange;text-decoration:underline'>YOU HAVE NEW NOTIFICATIONS!</span><br><br>
+    <strong style='color:yellow'>NEW</strong> Requests: <span style='color:red'>4</span><br>
+    <strong style='color:yellow'>NEW</strong> Approvals: <span style='color:red'>3</span><br>
+    <strong style='color:yellow'>NEW</strong> Meetings: <span style='color:red'>1</span><br>
+    <strong style='color:yellow'>NEW</strong> Views: <span style='color:red'>28</span><br>
+    <strong style='color:yellow'>NEW</strong> Updates: <span>0</span><br><br>
+    <button type="button" name="noteClose" class='noteClose' ng-click='closeNote()'>Close</button>
+  </p>
+</div>
+<!-- MAIN VIEW -->
+<div class="secBanner">
+  <p>You Have: <span style='color:red'>2</span> Unscheduled Meetings!</p>
+
+  <div class="meetingBox">
+    <img src="plant.jpg" style="float: left; display: inline-block;position:absolute;left: 3vw;top: 8vh;border: 3px solid whitesmoke;">
+     <p>Robert Plant</p>
+     <button type="button" class='viewPro'>VIEW PROFILE</button>
+     <p>You and <span style='color:yellow'>ROBERT</span> are now connected!<br><span style='color:yellow'>Robert</span> will teach you <span style='color:red'>vocals</span> in exchange<br>for you teaching <span style='color:yellow'>Robert</span> <span style='color:red'>archery</span>.</p>
+     <button type="button" class="contact" style='royalblue'>CONTACT<br>ROBERT</button>
+  </div>
+
+  <div class="meetingBox">
+    <img src="lennon.jpg" style="float: left; display: inline-block;position:absolute;left: 3vw;top: 8vh;border: 3px solid whitesmoke;">
+     <p>John Lennon</p>
+     <button type="button" class='viewPro'>VIEW PROFILE</button>
+     <p>You and <span style='color:yellow'>JOHN</span> are now connected!<br><span style='color:yellow'>John</span> will teach you <span style='color:red'>song writing</span> in exchange<br>for you teaching <span style='color:yellow'>John</span> <span style='color:red'>painting</span>.</p>
+     <button type="button" class="contact" style='royalblue'>CONTACT<br>JOHN</button>
+  </div>
+
+
+</div>
+
+<!-- FOOTER -->
+      <div class="footer">
+  <p style='margin-top: 4vh;line-height: 28px;'>© 2017 Illuminate Applications, Inc.<br>support@illuminateapp.com<br>P: 555-456-7890<br>F: 555-123-0987</p>      </div>
+    </div>
+<!-- END -->
+  </div>
+</body>
+<script src="illuminate.js"></script>
+</html>

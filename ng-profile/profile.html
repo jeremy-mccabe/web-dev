@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="profile.js"></script>
+  </head>
+<!-- BODY Start -->
+  <body ng-controller="mainController as Main" style="background-color:lightseagreen;">
+
+
+<!-- Template -->
+<div class="template">
+<!-- Banner -->
+  <div class="socialBanner">
+    <h2 class="socialTitle">FoozBook</h2>
+<!-- Edit Button -->
+    <button type="button" id="button" ng-click="Main.toggleForm()">{{Main.displayAction}}</button>
+
+  </div>
+  <!-- Img -->
+  <div class="imgBox">
+    <img src="http://cimg.tvgcdn.net/i/r/2012/08/09/a45fb16a-e10c-452d-8eb4-e7fe001df6e8/crop/660x494+0+0/thumbnail/350x262/c27ced3499ab418ef64ab9dbc8481368/120809alf1.jpg" alt="Alf" class="img">
+</div>
+<!-- Form -->
+
+<div class="formBox">
+  <form class="form" action="index.html" method="post" ng-show="Main.here">
+    <textarea id='yo'name="Name" placeholder='Edit Name' rows="4" cols="80" ng-model='Main.addName'></textarea> <br>
+    <textarea name="Bio" placeholder='Edit Bio' rows="8" cols="80" ng-model='Main.addBio'></textarea> <br>
+    <textarea name="Fav Books" placeholder='Edit Favorite Books' rows="3" cols="80" ng-model='Main.addBooks'></textarea> <br>
+    <textarea name="Fav .JS" placeholder='Edit Favorite JS Libraries' rows="3" cols="80" ng-model='Main.addLibs'></textarea> <br>
+    <button id="saveChanges"type="button" name="submit" ng-click="Main.checker(); Main.submitEdit()">SUBMIT</button>
+  </form>
+</div>
+<!-- Info -->
+  <div class="profileText">
+  <h3>Name:</h3>
+  <p ><span ng-bind='Main.name'></span></p>
+   <h3>Bio:</h3>
+   <p ng-bind='Main.bio'></p>
+   <h3>Favorite books:</h3>
+   <p ng-bind='Main.books'></p>
+   <h3>Favorite .JS libraries:</h3>
+   <p ng-bind='Main.libs'></p>
+  </div>
+</div>
+
+<!-- END -->
+  </body>
+</html>
